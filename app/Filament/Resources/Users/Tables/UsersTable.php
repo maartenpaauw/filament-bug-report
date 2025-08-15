@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Users\Tables;
 
+use App\Filament\FooAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -39,6 +40,7 @@ final class UsersTable
             ])
             ->recordActions([
                 EditAction::make(),
+                FooAction::make('foo'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

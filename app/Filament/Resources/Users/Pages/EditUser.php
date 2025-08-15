@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Users\Pages;
 
+use App\Filament\FooAction;
 use App\Filament\Resources\Users\UserResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
@@ -16,6 +17,7 @@ final class EditUser extends EditRecord
     {
         return [
             DeleteAction::make(),
+            FooAction::make('foo'),
         ];
     }
 }
